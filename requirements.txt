@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+nltk
+sentence-transformers
+streamlit
+joblib
+plotly
+matplotlib
