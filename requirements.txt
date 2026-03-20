@@ -7,3 +7,4 @@ streamlit
 joblib
 plotly
 matplotlib
+altair==4.4.2
