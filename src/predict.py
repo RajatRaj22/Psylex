@@ -1,13 +1,13 @@
 import joblib
-from sklearn.feature_extraction.text import TfidfVectorizer
 
+# Load trained model + SAME vectorizer
 model = joblib.load("models/personality_model.pkl")
-
-vectorizer = TfidfVectorizer(max_features=5000)
+vectorizer = joblib.load("models/vectorizer.pkl")
 
 def predict_personality(text):
 
-    embedding = vectorizer.fit_transform([text]).toarray()
+    # 🔥 IMPORTANT: use transform NOT fit_transform
+    embedding = vectorizer.transform([text]).toarray()
 
     prediction = model.predict(embedding)[0]
 
