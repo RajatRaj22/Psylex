@@ -1,25 +1,22 @@
 import joblib
-from src.embeddings import generate_embeddings
+from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load trained model
 model = joblib.load("models/personality_model.pkl")
 
-# Map dataset labels → real personality names
-trait_mapping = {
-    "cEXT": "Extroversion",
-    "cNEU": "Neuroticism",
-    "cAGR": "Agreeableness",
-    "cCON": "Conscientiousness",
-    "cOPN": "Openness"
-}
+vectorizer = TfidfVectorizer(max_features=5000)
 
 def predict_personality(text):
 
-    embedding = generate_embeddings([text])
+    embedding = vectorizer.fit_transform([text]).toarray()
 
     prediction = model.predict(embedding)[0]
 
-    # Convert results to readable labels
-    result = dict(zip(trait_mapping.values(), prediction))
+    traits = [
+        "Extroversion",
+        "Neuroticism",
+        "Agreeableness",
+        "Conscientiousness",
+        "Openness"
+    ]
 
-    return result
+    return dict(zip(traits, prediction))
