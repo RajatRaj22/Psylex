@@ -7,7 +7,7 @@ The system analyzes linguistic patterns and semantic embeddings to estimate the 
 ---
 
 ## 🚀 Live Demo
-👉 https://https://psylex.onrender.com
+👉 https://psylex.onrender.com
 
 ---
 
@@ -109,3 +109,8 @@ I enjoy working in teams and love exploring new ideas.
 - Add transformer-based embeddings (BERT)
 - Introduce explainability (SHAP/LIME)
 - Improve UI/UX for better interaction
+
+---
+
+## 👨‍💻 Author
+Rajat Raj
