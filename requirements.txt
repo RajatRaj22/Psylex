@@ -2,9 +2,6 @@ pandas
 numpy
 scikit-learn
 nltk
-streamlit
+streamlit==1.28.0
 joblib
 plotly
-matplotlib
-altair==4.2.2
-pillow==10.0.1
