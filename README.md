@@ -6,13 +6,30 @@ The system analyzes linguistic patterns and semantic embeddings to estimate the 
 
 ---
 
+## 🚀 Live Demo
+👉 https://https://psylex.onrender.com
+
+---
+
 ## Features
 
-• NLP text preprocessing  
-• Transformer based sentence embeddings  
-• Personality prediction using machine learning  
-• Interactive Streamlit dashboard  
-• Personality trait visualization
+- Predicts Big Five traits:
+  - Extroversion
+  - Neuroticism
+  - Agreeableness
+  - Conscientiousness
+  - Openness
+- Real-time text analysis
+- Interactive visualization using Plotly
+- Lightweight and production-ready pipeline
+
+---
+
+## 🧠 How It Works
+1. Input text is preprocessed using NLP techniques
+2. TF-IDF vectorizer converts text into numerical features
+3. Multi-output regression model predicts personality traits
+4. Results are visualized in an interactive radar chart
 
 ---
 
@@ -44,13 +61,10 @@ Visualization Dashboard
 
 ---
 
-## Personality Traits Predicted
-
-Openness  
-Conscientiousness  
-Extroversion  
-Agreeableness  
-Neuroticism  
+## 🏗️ Key Engineering Highlights
+- Maintained consistency between training and inference by saving and reusing the same TF-IDF vectorizer
+- Handled real-world deployment challenges including dependency conflicts and environment issues
+- Optimized system for production by removing heavy dependencies and ensuring stability
 
 ---
 
@@ -84,9 +98,14 @@ streamlit run app/streamlit_app.py
 
 ---
 
-## Future Improvements
+## 📊 Example Input
 
-• Personality evolution tracking  
-• Explainable AI for predictions  
-• Chatbot personality adaptation  
-• Multimodal personality analysis
+I enjoy working in teams and love exploring new ideas.
+
+---
+
+## 📈 Future Improvements
+
+- Add transformer-based embeddings (BERT)
+- Introduce explainability (SHAP/LIME)
+- Improve UI/UX for better interaction
